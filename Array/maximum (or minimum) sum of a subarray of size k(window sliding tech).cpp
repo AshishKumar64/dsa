@@ -18,7 +18,7 @@ int solve(int arr[], int arr_size, int subarr_size){
     }
     current_sum = result;
     for(int i=subarr_size; i<arr_size; i++){
-        current_sum = arr[i] - arr[i-subarr_size];
+        current_sum += arr[i] - arr[i-subarr_size];
         result = max(result, current_sum);
     }
     return result;
